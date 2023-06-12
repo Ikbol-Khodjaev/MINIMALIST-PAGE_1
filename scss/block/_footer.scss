@@ -1,0 +1,152 @@
+@use "../fonts";
+@use "../variable";
+@use "../mixin";
+footer{
+    background: variable.$texts-color;
+}
+.footer_items{
+    min-height: 80px;
+    padding: 0 3rem;
+    width: 100%;
+}
+.items__information{
+    width: 40%;
+}
+.information__ul{
+    flex-basis: 80%;
+    list-style-type: none;
+}
+.information__ul .ul__list .list__link{
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+.items__icons{
+    width: 12%;
+}
+@include mixin.media(1110px){
+    .items__information{
+        width: 45%;
+    }
+}
+@include mixin.media(1000px){
+    .items__information{
+        width: 60%;
+    }
+}
+@include mixin.media(1110px){
+    .items__information{
+        width: 75%;
+    }
+}
+@include mixin.media(950px){
+    .items__icons{
+        width: 18%;
+    }
+}
+@include mixin.media(810px){
+    .items__icons{
+        width: 20%;
+    }
+}
+@include mixin.media(740px){
+    .information__ul{
+        width: 80%;
+    }
+}
+@include mixin.media(650px){
+    .information__ul{
+        width: 90%;
+    }
+    .items__icons{
+        width: 22%;
+    }
+}
+@include mixin.media(610px){
+    .footer_items{
+        min-height: 354px;
+        flex-direction: column;
+    }
+    .items__information{
+        flex-direction: column;
+        min-height: 150px;
+    }
+    .items__information .logo{
+        @include mixin.column;
+        padding-top: 2rem;
+        min-height: 100px;
+    }
+    .information__ul{
+        flex-direction: column;
+        min-height: 140px;
+        // border: 1px solid #fff;
+    }
+    .items__icons{
+        padding-bottom: 3rem;
+    }
+}
+@include mixin.media(580px){
+    .items__icons{
+        width: 26%;
+    }
+}
+@include mixin.media(535px){
+    .items__icons{
+        width: 28%;
+    }
+}
+@include mixin.media(580px){
+    .items__icons{
+        width: 30%;
+    }
+}
+@include mixin.media(460px){
+    .items__icons{
+        width: 35%;
+    }
+}
+@include mixin.media(400px){
+    .items__icons{
+        width: 40%;
+    }
+}
+@include mixin.media(375px){
+    .items__icons{
+        width: 48%;
+    }
+}
+@include mixin.media(340px){
+    .items__icons{
+        width: 56%;
+    }
+}
+@include mixin.media(310px){
+    .items__icons{
+        width: 64%;
+    }
+}
+@include mixin.media(297px){
+    .information__ul{
+        width: 100%;
+    }
+    .information__ul .list__link{
+        width: 100%;
+    }
+    .items__icons{
+        width: 76%;
+    }
+}
+@include mixin.media(290px){
+    footer{
+        overflow-x: hidden;
+    }
+    .items__icons{
+        width: 90%;
+    }
+}
+@include mixin.media(243px){
+    .items__icons{
+        width: 100%;
+    }
+}

@@ -1,0 +1,74 @@
+@use "../fonts";
+@use "../variable";
+@use "../mixin";
+.header_items{
+    padding: 3rem  0 3rem 3rem;
+    width: 100%;
+}
+.nav__logo{
+    text-decoration: none;
+}
+.nav__ul{
+    width: 36%;
+    list-style-type: none;
+}
+.ul_list .list_link{
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+.ul_list .list_link:focus{
+    color: variable.$list-link-color;
+}
+.burger{
+    display: none;
+}
+@include mixin.media(1285.6px){
+    .container{
+        max-width: 1285px;
+    }
+    .nav__ul{
+        width: 40%;
+    }
+}
+@include mixin.media(1100px){
+    .nav__ul{
+        width: 45%;
+    }
+}
+@include mixin.media(915px){
+    .nav__ul{
+        width: 55%;
+    }
+}
+@include mixin.media(800px){
+    .nav__ul{
+        width: 65%;
+    }
+}
+@include mixin.media(780px){
+    .nav__ul{
+        flex-direction: column;
+        background: variable.$texts-color;
+        width: 223px;
+        height: 186px;
+        padding: 2rem 2.5rem;
+        transform: translateX(108%);
+        position: absolute;
+        right: 1rem;
+        top: 6rem;
+        opacity: 1;
+        transition: 0.8s ease all;
+    }
+    .burger{
+        display: block;
+    }
+    .active_nav__ul{
+        transform: translateX(0%);
+    }
+    .ul_list .list_link{
+        color: #fff;
+    }
+}

@@ -1,0 +1,354 @@
+@use "../fonts";
+@use "../variable";
+@use "../mixin";
+.hero{
+    padding-top: 9rem;
+    padding-left: 12rem;
+}
+.hero_items{
+    background-image: url("../../assets/images/hero_back.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 1111.3px;
+    height: 601px;
+    display: flex;
+    align-items: end;
+}
+.hero_texts{
+    background: #fafafa;
+    width: 40.04319265724827%;
+    height: 59.40099833610649%;
+    padding: 3rem 0;
+}
+.hero_text{
+    font-size: 50px;
+    width: 88%;
+    line-height: 50px;
+    letter-spacing: -0.45px
+}
+.hero_about{
+    width: 45%;
+    background: variable.$about-background;
+    padding-right: 2.5rem;
+    margin-top: 3.75rem;
+}
+.hero_about_text{
+    color: #fff;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+.about{
+    padding-left: 12rem;
+    padding-top: 12rem;
+}
+.about_items{
+    width: 100%;
+    min-height: 605px;
+    display: grid;
+    grid-template: repeat(1, 600px) / repeat(2, 540px);
+    justify-content: space-between;
+    align-items: center;
+}
+.about_texts{
+    width: 540px;
+    min-height: 600px;
+    @include mixin.column;
+}
+.about_title{
+    font-size: 40px;
+}
+.about_text{
+    opacity: 80%;
+    width: 350px;
+    line-height: 30px;
+}
+.btn{
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 2px;
+    padding: 17px 32px;
+    border: 1px solid variable.$texts-color;
+    margin-bottom: 1rem;
+}
+.line{
+    width: 350px;
+    height: 1px;
+    border: 1px solid variable.$texts_color;
+    opacity: 15%;
+}
+.contact{
+    padding: 8rem;
+    max-width: 100%;
+    padding-left: 12rem;
+}
+.contact .contact_items{
+    display: grid;
+    grid-template: repeat(1, 84px) / repeat(3, auto);
+    align-items: center;
+}
+.contact .contact_items .contact_title{
+    font-size: 40px;
+    width: 350px;
+    line-height: 42px;
+}
+.contact .contact_items .line{
+    width: 534px;
+}
+.contact .contact_items .btn_1{
+    width: 162.03px;
+}
+@include mixin.media(1285.6px){
+    .container{
+        max-width: 1285px;
+    }
+    .hero{
+        padding-left: 4rem;
+    }
+    .about{
+        padding-left: 4rem;
+    }
+    .contact{
+        padding-left: 4rem;
+    }
+}
+@include mixin.media(1215px){
+    .hero{
+        padding-left: 2rem;
+    }
+    .about{
+        padding-left: 2rem;
+    }
+    .contact{
+        padding-left: 2rem;
+    }
+}
+@include mixin.media(1180px){
+    .hero{
+        padding-left: 0rem;
+    }
+    .about{
+        padding-left: 0rem;
+    }
+    .contact{
+        padding-left: 0rem;
+    }
+}
+@include mixin.media(1148px){
+    .hero{
+        overflow-x: hidden;
+    }
+    .hero_items{
+        background-image: url("../../assets/images/hero_back_1.png");
+        padding-left: 13.2rem;
+    }
+    .hero_texts{
+        background: #fafafa;
+        width: 514px;
+        height: 278px;
+        padding: 3rem 0;
+    }
+    .hero_text{
+        width: 100%;
+    }
+    .hero_about{
+        margin-top: 2rem;
+    }
+    .about{
+        overflow-x: hidden;
+        padding-left: 13.2rem;
+        justify-content: none;
+    }
+    .about_items{
+        grid-template: repeat(1, 600px) / repeat(2, 360px);
+    }
+    .about_text{
+        width: 63%;
+    }
+    .contact{
+        padding-left: 13.2rem;
+    }
+    .contact_items{
+        width: 100%;   
+    }
+    .contact .contact_items .line{
+        width: 113px;
+    }
+}
+@include mixin.media(990px){
+    .hero{
+        padding-left: 7rem;
+    }
+    .hero_items{
+        background-position: left;
+        padding-left: 0;
+    }
+    .about{
+        padding-left: 7rem;
+    }
+    .about_items{
+        grid-template: repeat(1, 600px) / repeat(2, 400px);
+    }
+    .contact{
+        padding-left: 7rem;
+    }
+}
+@include mixin.media(905px){
+    .hero{
+        padding-left: 5rem;
+    }
+    .about{
+        padding-left: 5rem;
+    }
+    .contact{
+        padding-left: 5rem;
+    }
+}
+@include mixin.media(860px){
+    .hero{
+        padding-left: 3rem;
+    }
+    .about{
+        padding-left: 3rem;
+    }
+    .contact{
+        padding-left: 3rem;
+    }
+}
+@include mixin.media(830px){
+    .hero{
+        padding-left: 1rem;
+    }
+    .about{
+        padding-left: 1rem;
+    }
+    .contact{
+        padding-left: 1rem;
+    }
+    .about_items{
+        grid-template: repeat(1, 600px) / repeat(2, 360px);
+    }
+}
+@include mixin.media(792px){
+    .hero{
+        padding-left: 0rem;
+    }
+    .about{
+        padding-left: 0rem;
+    }
+    .contact{
+        padding-left: 0rem;
+    }
+}
+@include mixin.media(780px){
+    .hero{
+        padding-left: 1.5rem;
+    }
+}
+@include mixin.media(738px){
+    .hero{
+        padding-left: 0rem;
+    }
+    .about_items{
+        display: flex;
+        flex-direction: column;
+    }
+    .about_img{
+        padding-left: 2rem;
+    }
+    .about_texts{
+        margin-left: 16.3rem;
+    }
+    .about_texts .line{
+        width: 311px;
+        margin: 2rem 0 3rem;
+    }
+    .about_texts .about_text{
+        width: 311px;
+    }
+    .btn{
+        margin-top: 2rem;
+    }
+}
+@include mixin.media(692px){
+    .hero_items{
+        background-image: url("../../assets/images/hero_back_2.png");
+        width: 100%;
+        background-position: center top;
+        // padding-left: 9rem;
+    }
+    .hero_texts{
+        background: transparent;
+        width: 100%;
+        height: 55%;
+        margin-left: 9rem;
+        // border: 1px solid black;
+    }
+    .hero_text{
+        width: 390px;
+        // border: 1px solid black;
+    }
+    .hero_about{
+        width: 200px;
+    }
+    .contact .contact_items{
+        height: 35vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: center;
+        align-items: center;
+        margin-left: 4rem;
+    }
+    .contact .contact_items .contact_title{
+        width: 60%;
+        text-align: center;
+        letter-spacing: -0.357143px;
+    }
+    .contact .contact_items .line{
+        width: 0;
+    }
+}
+@include mixin.media(608px){
+    .contact .contact_items .contact_title{
+        width: 76%;
+    }
+}
+@include mixin.media(565px){
+    .hero_texts{
+        margin-left: 5.6rem;
+    }
+}
+@include mixin.media(519px){
+    .contact .contact_items .contact_title{
+        width: 98%;
+    }
+}
+@include mixin.media(510px){
+    .hero_texts{
+        margin-left: 2.2rem;
+    }
+}
+@include mixin.media(455px){
+    .hero_texts{
+        margin-left: 0rem;
+    }
+}
+@include mixin.media(445px){
+    .contact .contact_items .contact_title{
+        width: 100%;
+    }
+}
+@include mixin.media(272px){
+    .contact_items{
+        border: 1px solid black;
+        align-items: start;
+        justify-content: start;
+        margin-left: 0;
+    }
+}
+@include mixin.media(273px){
+    body{
+        overflow-x: hidden;
+    }
+}

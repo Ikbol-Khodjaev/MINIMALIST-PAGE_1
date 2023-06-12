@@ -1,0 +1,36 @@
+@use "variable";
+@use "mixin";
+*::before, *::after, *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: variable.$texts-color;
+}
+.flex{
+    @include mixin.flex;
+}
+.ibarra-real-nova{
+    font-family: 'Ibarra-real-nova';
+}
+.public-sans{
+    font-family: "Public-sans"
+}
+body{
+    background: #f2f2f2;
+}
+section, footer{
+    width: 100%;
+    height: auto;
+}
+header{
+    width: 100%;
+    height: auto;
+    position: fixed;
+    background: #f2f2f2;
+    z-index: 1;
+}
+#main{
+    width: 100%;
+    height: auto;
+    z-index: 0;
+}
